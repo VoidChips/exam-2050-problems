@@ -61,10 +61,14 @@ Each problem directory must contain a *description.json* file with details of th
   *key value pairs of string, integer/boolean/string*
 - **answer**: 
   > The correct answer to the problem. If **type** is *"multiple response"* and there are no correct answers, use *null* or an empty array.
-  + **"multiple choice"**: *string*
-  + **"multiple response"**: *string[]*
-  + **"free response"**: *string*
+  + **"multiple choice"**: 
+    > *string*
+  + **"multiple response"**: 
+    > *string[]*
+  + **"free response"**: 
+    > *string*
 
+<br>
 
 **Example**: Create problem #20 for exam 3, which is a multiple choice question.
 1. Create *problem20* directory in */exams/3*
