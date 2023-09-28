@@ -35,6 +35,7 @@ If you want to add problems, see below.
 
 ## 🏁 How to contribute <a name = "how_to_contribute"></a>
 
+Each exam has 50 problems.  
 To add a problem, create a *problemX* directory under an exam with less than 50 problems, with X being the problem number.  
 If the existing exams already have 50 problems, create a new exam directory and create the problem directory there.
 Each problem directory must contain a *description.json* file with details of the problem.  
@@ -50,7 +51,7 @@ Each problem directory must contain a *description.json* file with details of th
   + **"multiple choice"**: 
     > A multiple choice problem with one correct answer.
   + **"multiple response"**: 
-    > A muliple choice problem with one or more correct answer.
+    > A muliple choice problem with zero, one, or multiple answers.
   + **"free response"**: 
     > Also known as an essay question, there are no choices. However, there is a predetermined answer.
 - **useImage**: 
@@ -62,16 +63,16 @@ Each problem directory must contain a *description.json* file with details of th
   If **useImage** is set to true, this property is still required to display the choices that can be selected.  
   *key value pairs of string, integer/boolean/string*
 - **answer**: 
-  > The correct answer to the problem.
+  > The correct answer to the problem. If **type** is *"multiple response"* and there are no correct answers, use *null* or an empty array.
   + **"multiple choice"**: *string*
   + **"multiple response"**: *string[]*
   + **"free response"**: *string*
 
 
 **Example**: Create problem #20 for exam 3, which is a multiple choice question.
-1. Create problem20 directory in /exams/3
-2. Create description.json file in /exams/3/problem20.
-3. In description.json, add details. The answer is b, which is "choice 2".
+1. Create *problem20* directory in */exams/3*
+2. Create *description.json* file in */exams/3/problem20*.
+3. In *description.json*, add details. The correct choice is b, so the answer is "choice 2".
 ```
 {
     "exam": 3,
@@ -86,6 +87,54 @@ Each problem directory must contain a *description.json* file with details of th
         "d": "choice 4"
     },
     "answer": "b"
+}
+```
+
+**Example**: *description.json* for a multiple response problem with one correct answer. The correct answer is "choice 1".
+```
+{
+    "exam": 2,
+    "number": 4,
+    "type": "multiple response",
+    "useImage": false,
+    "problem": "Example",
+    "choices": {
+        "a": "choice 1",
+        "b": "choice 2",
+        "c": "choice 3",
+        "d": "choice 4"
+    },
+    "answer": ["a"]
+}
+```
+
+**Example**: *description.json* for a multiple response problem with multiple correct answers. The correct answers are "choice 1" and "choice 2".
+```
+{
+    "exam": 1,
+    "number": 33,
+    "type": "multiple response",
+    "useImage": false,
+    "problem": "Example",
+    "choices": {
+        "a": "choice 1",
+        "b": "choice 2",
+        "c": "choice 3",
+        "d": "choice 4"
+    },
+    "answer": ["a", "b"]
+}
+```
+
+**Example**: *description.json* for a free response problem. The correct answer is "example".
+```
+{
+    "exam": 3,
+    "number": 25,
+    "type": "free response",
+    "useImage": false,
+    "problem": "Example",
+    "answer": "example"
 }
 ```
 
