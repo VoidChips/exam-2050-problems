@@ -1,0 +1,14 @@
+{
+    "exam": 1,
+    "number": 2,
+    "type": "multiple response",
+    "useImage": false,
+    "problem": "Which of the following expressions evaluates to 5?",
+    "choices": {
+        "a": "5 x 0",
+        "b": "2 x 5 + 1",
+        "c": "200 x 5 / 200",
+        "d": "34 - 29"
+    },
+    "answer": ["c", "d"]
+}
