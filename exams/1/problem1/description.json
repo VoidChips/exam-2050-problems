@@ -1,0 +1,14 @@
+{
+    "exam": 1,
+    "number": 1,
+    "type": "multiple choice",
+    "useImage": false,
+    "problem": "What is 5 x 42?",
+    "choices": {
+        "a": 200,
+        "b": 210,
+        "c": 220,
+        "d": 230
+    },
+    "answer": ["b"]
+}
