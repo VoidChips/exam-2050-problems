@@ -141,6 +141,6 @@ Each problem directory must contain a *description.json* file with details of th
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@VoidChips](https://github.com/VoidChips) - Idea & Initial work
 
 See also the list of [contributors](https://github.com/VoidChips/exam-2050-problems/contributors) who participated in this project.
