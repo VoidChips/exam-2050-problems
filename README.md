@@ -16,10 +16,7 @@
 ---
 
 <p align="center"> 
-You have to take a test in the game, which results in different endings based on your score. <br> 
-Taking place in a dystopian society, this single test determines your future. The test has problems from multiple subjects. <br>
-Getting a low score means getting sent to the labor camp with horrible conditions, or worse. <br>
-The class average is also factored into your grade, so you have to also perform well compared to your peers.
+You have to take a life changing important exam, which results in different endings based on your score. Taking place in a dystopian society, this single test determines your future. The test has problems from multiple subjects. Getting a low score means getting sent to the labor camp with horrible conditions, or worse. The class average is also factored into your grade, so you have to also perform well compared to your peers.
 </p>
 
 ## 📝 Table of Contents
