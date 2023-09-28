@@ -35,7 +35,59 @@ If you want to add problems, see below.
 
 ## 🏁 How to contribute <a name = "how_to_contribute"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+To add a problem, create a *problemX* directory under an exam with less than 50 problems, with X being the problem number.  
+If the existing exams already have 50 problems, create a new exam directory and create the problem directory there.
+Each problem directory must contain a *description.json* file with details of the problem.  
+
+### Properties in description.json
+
+- **exam**:  
+  > The exam number. *integer*
+- **number**: 
+  > The problem number. *integer*
+- **type**: 
+  > The problem type. *string*
+  + **"multiple choice"**: 
+    > A multiple choice problem with one correct answer.
+  + **"multiple response"**: 
+    > A muliple choice problem with one or more correct answer.
+  + **"free response"**: 
+    > Also known as an essay question, there are no choices. However, there is a predetermined answer.
+- **useImage**: 
+  > Determines if the problem uses an image to ask the question instead of the string from **problem** property. *boolean*
+- **problem**: 
+  > The prompt for the problem. Ask your question here. If **useImage** is set to true, the value here is ignored. *string*
+- **choices**: 
+  > The choices for multiple choice or multiple response problems. The key is the choice and the value is the answer associated with the choice.  
+  If **useImage** is set to true, this property is still required to display the choices that can be selected.  
+  *key value pairs of string, integer/boolean/string*
+- **answer**: 
+  > The correct answer to the problem.
+  + **"multiple choice"**: *string*
+  + **"multiple response"**: *string[]*
+  + **"free response"**: *string*
+
+
+**Example**: Create problem #20 for exam 3, which is a multiple choice question.
+1. Create problem20 directory in /exams/3
+2. Create description.json file in /exams/3/problem20.
+3. In description.json, add details. The answer is b, which is "choice 2".
+```
+{
+    "exam": 3,
+    "number": 20,
+    "type": "multiple choice",
+    "useImage": false,
+    "problem": "Example",
+    "choices": {
+        "a": "choice 1",
+        "b": "choice 2",
+        "c": "choice 3",
+        "d": "choice 4"
+    },
+    "answer": "b"
+}
+```
 
 
 ## ✍️ Authors <a name = "authors"></a>
