@@ -52,7 +52,9 @@ Each problem directory must contain a *description.json* file with details of th
   + **"free response"**: 
     > Also known as an essay question, there are no choices. However, there is a predetermined answer.
 - **useImage**: 
-  > Determines if the problem uses an image to ask the question instead of the string from **problem** property. *boolean*
+  > Determines if the problem uses an image to ask the question instead of the string from **problem** property.  
+  JPG and PNG images are supported. Use any file name.   
+  *boolean*
 - **problem**: 
   > The prompt for the problem. Ask your question here. If **useImage** is set to true, the value here is ignored. *string*
 - **choices**: 
@@ -88,6 +90,24 @@ Each problem directory must contain a *description.json* file with details of th
         "d": "choice 4"
     },
     "answer": "b"
+}
+```
+
+**Example**: *description.json* for a multiple choice problem with an image. The correct answer is "choice 3".
+```
+{
+    "exam": 3,
+    "number": 22,
+    "type": "multiple choice",
+    "useImage": true,
+    "problem": null,
+    "choices": {
+        "a": "choice 1",
+        "b": "choice 2",
+        "c": "choice 3",
+        "d": "choice 4"
+    },
+    "answer": "c"
 }
 ```
 

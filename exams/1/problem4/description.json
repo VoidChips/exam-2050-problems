@@ -1,0 +1,14 @@
+{
+    "exam": 1,
+    "number": 4,
+    "type": "multiple choice",
+    "useImage": true,
+    "problem": null,
+    "choices": {
+        "a": 1968,
+        "b": 1970,
+        "c": 1973,
+        "d": 1975
+    },
+    "answer": "d"
+}
